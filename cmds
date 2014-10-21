@@ -1,0 +1,2 @@
+timeout 120s ./scholar.py -c 5000 --cites=8488599356685324414 --csv > cites8488599356685324414.csv
+cat cites8488599356685324414.csv | prepend "Title|Url|Year|||ID|PDF||||" | csvsort -d "|" -c "Year" | csvlook > csvlook.txt
